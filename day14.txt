@@ -1,0 +1,21 @@
+Bandit level 14-15 done.
+Password for Bandit15 is:  8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+Date: June 1, 2026, PHT 4:30pm
+
+GOAL: SEND BANDIT PASSWORD TO localhost:30000 to get Bandit15 Password
+
+KEY COMMANDS:
+1. cat /etc/bandit_pass/bandit14
+MU4VWeTyJk8ROof1qqmcBPaLh71DCPvS
+
+telnet localhost 30000
+paste password, enter twice
+Returns:  8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
+
+FAILED ATTEMPTS + FIX:
+-echo 'pass' | nc localhost 30000 
+-Issue: Kept hitting Enter after | causing > prompt
+Fix: Used telnet instead. No pipes needed.
+
+*D1 Lesson*
+Networking 101. Services listen on ports. Send correct data - get data back.stelnet/nc are manual ways to talk to APIs,databases, custom daemons.
